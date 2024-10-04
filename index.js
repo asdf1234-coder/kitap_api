@@ -39,7 +39,9 @@ app.get('/api/kitaplar', async (req, res) => {
     res.status(500).json({ message: 'Veri çekme hatası' });
   }
 });
-
+app.get('/api', async (req, res) => {
+  res.send("oldu")
+});
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
